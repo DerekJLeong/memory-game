@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head Element -->
+
+<head>
+   <meta charset="utf-8">
+   <meta name="Description" content="">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+   <title>4x4 Matching Game</title>
+
+   <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+   <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Sedgwick+Ave">
+   <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/game.css">
+</head>
+
+<!-- Body Element -->
+
+<body>
+   <!-- div containing the entire game -->
+   <div class="game_container">
+
+      <!-- Header -->
+      <header>
+         <h1>4x4 Matching Game</h1>
+      </header>
+      <!-- Rating, Moves, Timer, and Restart -->
+      <section class="score-panel">
+         <ul class="stars">
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+         </ul>
+
+         <span class="moves">0</span> Move(s)
+
+         <div class="timer">
+         </div>
+
+         <div class="restart" onclick=startGame()>
+            <i class="fa fa-repeat"></i>
+         </div>
+      </section>
+
+      <!-- Card deck made from unordered list of icons-->
+      <ul class="deck" id="card_deck">
+         <li class="card" type="microchip">
+            <i class="fa fa-microchip"></i>
+         </li>
+         <li class="card" type="heart">
+            <i class="fa fa-heart"></i>
+         </li>
+         <li class="card" type="book">
+            <i class="fa fa-book"></i>
+         </li>
+         <li class="card" type="globe">
+            <i class="fa fa-globe"></i>
+         </li>
+         <li class="card" type="eye">
+            <i class="fa fa-eye"></i>
+         </li>
+         <li class="card" type="bluetooth">
+            <i class="fa fa-bluetooth-b"></i>
+         </li>
+         <li class="card" type="html5">
+            <i class="fa fa-html5"></i>
+         </li>
+         <li class="card" type="steam">
+            <i class="fa fa-steam-square"></i>
+         </li>
+         <li class="card" type="microchip">
+            <i class="fa fa-microchip"></i>
+         </li>
+         <li class="card" type="heart">
+            <i class="fa fa-heart"></i>
+         </li>
+         <li class="card" type="book">
+            <i class="fa fa-book"></i>
+         </li>
+         <li class="card" type="globe">
+            <i class="fa fa-globe"></i>
+         </li>
+         <li class="card" type="eye">
+            <i class="fa fa-eye"></i>
+         </li>
+         <li class="card" type="bluetooth">
+            <i class="fa fa-bluetooth-b"></i>
+         </li>
+         <li class="card" type="html5">
+            <i class="fa fa-html5"></i>
+         </li>
+         <li class="card" type="steam">
+            <i class="fa fa-steam-square"></i>
+         </li>
+      </ul>
+
+      <div id="popup1" class="overlay">
+         <div class="popup">
+            <h2>Congratulations!</h2>
+            <a class="close" href=#>×</a>
+            <div class="content_1">
+               <p>You've matched all the cards, nice!</p>
+            </div>
+            <div class="content_2">
+               <p>You made <span id=finalMove> </span> moves </p>
+               <p>in <span id=totalTime> </span> </p>
+               <p>Rating: <span id=starRating></span></p>
+            </div>
+            <button id="play-again" onclick="playAgain()">
+               Play again</a>
+            </button>
+         </div>
+      </div>
+   </div>
+   <script src="js/game.js"></script>
+</body>
+
+</html>
